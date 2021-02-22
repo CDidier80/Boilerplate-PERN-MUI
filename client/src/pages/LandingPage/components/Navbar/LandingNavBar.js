@@ -7,7 +7,7 @@ const LandingNavBar = (props) => {
 
     return (
         <NavbarWrapper type={"default"}>
-            {props.fromApp.authenticated ? 
+            {props.authenticated ? 
                 <AuthenticatedLinks {...props} /> 
                 : 
                 <UnauthenticatedLinks />
