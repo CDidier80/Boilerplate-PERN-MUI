@@ -6,7 +6,7 @@ import React from 'react';
 const SignInSignUpPage = (props) => {
 
     return (
-        <div className={classes.signInSignUpPage}>
+        <div className={}>
             <Form {...props} />
         </div>
     )

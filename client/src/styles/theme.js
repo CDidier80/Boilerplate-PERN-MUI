@@ -2,7 +2,7 @@ import { createMuiTheme } from '@material-ui/core/'
 
 /** 
 * ----------------------------------------
-*  Transparency Helper Functions
+*     Transparency Helper Functions
 * ----------------------------------------
 */
 
@@ -29,17 +29,17 @@ const makeTransparentVariants = (rgb) => ({
 */
 
 // blue tone
-const primaryMain = 'rgba(34, 39, 195)'
-const primaryDark = 'rgba(24, 20, 93)'
-const primaryBright = 'rgba(81, 125, 222)'
+const primaryMain = 'rgba( , , )'
+const primaryDark = 'rgba( , , )'
+const primaryBright = 'rgba( , , )'
 // pink/orange tone
-const secondaryMain = 'rgba(255, 57, 57)'
-const secondaryBright = 'rgba(255, 124, 110)'  
-const secondaryDark = 'rgba(124, 27, 29)'  
-const secondaryWrapper = 'rgba(239, 84, 84)'  
+const secondaryMain = 'rgba( , , )'
+const secondaryBright = 'rgba( , , )'  
+const secondaryDark = 'rgba( , , )'
+const secondaryWrapper = 'rgba( , , )'
 
 
-export const moneyBuddyTheme = createMuiTheme({
+export const theme = createMuiTheme({
     boxShadows: {
         shadow1: `
         rgba(50, 50, 93, 0.33) 0px 11px 23px -5px, 
@@ -61,28 +61,28 @@ export const moneyBuddyTheme = createMuiTheme({
     },
 
     gradients: {
-        gradient1: `linear-gradient(
-            90deg, 
-            ${primaryMain}, 
-            ${secondaryMain}
-        )`,
+        // gradient1: `linear-gradient(
+        //     90deg, 
+        //     ${}, 
+        //     ${}
+        // )`,
 
-        gradient2: `linear-gradient(
-            180deg, 
-            ${primaryMain}, 
-            ${secondaryMain}
-        )`,
+        // gradient2: `linear-gradient(
+        //     180deg, 
+        //     ${}, 
+        //     ${}
+        // )`,
 
-        darkGradient1: `linear-gradient(
-            180deg, 
-            ${primaryDark}, 
-            ${secondaryDark}
-        )`,
-        wrapper: `linear-gradient(
-            180deg, 
-            ${primaryDark}, 
-            ${secondaryWrapper}
-        )`,
+        // darkGradient1: `linear-gradient(
+        //     180deg, 
+        //     ${}, 
+        //     ${}
+        // )`,
+        // wrapper: `linear-gradient(
+        //     180deg, 
+        //     ${}, 
+        //     ${}
+        // )`,
     },
 
     palette: {
@@ -127,112 +127,16 @@ export const moneyBuddyTheme = createMuiTheme({
     },
 
 
-    lato: {
-        textRendering: "optimizeLegibility !important",
-        WebkitFontSmoothing: "antialiased !important",
-        fontFamily: "Lato, sans-serif",
-    },
-
-    tableHeaders: {
-
-    },
-
+    // font: {
+        // textRendering: "optimizeLegibility !important",
+        // WebkitFontSmoothing: "antialiased !important",
+    //     fontFamily: "",
+    // },
 
 
     overrides: {
 
-        MuiAccordion: {
-            root: {
-                '&:first-child': {
-                    '&:before': {
-                    display: 'none'
-                    }
-                },
-                '&$expanded': {
-                    margin: '16px 0',
-                    '&:first-child': {
-                    marginTop: "1px"
-                    },
-                    '&:last-child': {
-                    marginBottom: 0
-                    },
-                    '&:before': {
-                    opacity: 0
-                    }
-                },
-                '&$expanded + &': {
-                    '&:before': {
-                    display: 'none'
-                    }
-                },
-            },
-        },
-
-        MuiInput: {
-            backgroundColor: "rgba(0,0,0,0)",
-            "&:-internal-autofill-selected": {
-                color: "blue",
-            },
-        },
-
-        MuiOutlinedInput : {
-            root: {
-                boxShadow: `
-                    rgba(50, 50, 93, 0.33) 0px 11px 23px -5px, 
-                    rgba(0, 0, 0, 0.5) 0px 6px 13px -8px`,
-                '&:hover': {
-                    borderColor: secondaryMain
-                },
-                "&:hover .MuiOutlinedInput-notchedOutline:hover": {
-                    borderColor: secondaryMain,
-                    height: "10px"
-                },
-            },
-            // these styles are applied to the fieldset element
-            // they control background color of textfields
-            notchedOutline: {
-                borderColor: primaryMain,
-                // backgroundColor: addTransparency(.15, primaryMain),
-                background: `linear-gradient( 
-                    180deg, 
-                    ${addTransparency(.06, primaryMain)}, 
-                    ${addTransparency(.3, secondaryBright)}
-                )`,
-            },
-        },
-
-        /* for text */
-        MuiInputBase: {
-            // the root cont
-            root: {
-                color: "black",
-                fontFamily: "Lato,sans-serif",
-                '&:hover .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline': {
-                    borderColor: secondaryMain
-                }
-            },
-        },
-        /* autofilled text labels for text fields, i.e. "password", "email" */
-        MuiInputLabel: {
-            outlined: {
-                color: secondaryDark,
-            }
-        },
-        }
+       
+    }
 })
 
-export const gradientWrapper = {
-    borderRadius: "8px",
-    backgroundColor: "#2227c3",
-    boxShadow:`        
-        2px 3px 1px -2px rgba(0,0,0,0.3),
-        2px 2px 2px 0px  rgba(0,0,0,0.22),
-        2px 1px 8px 0px rgba(0,0,0,0.18);`,
-    backgroundImage: "linear-gradient(180deg, #2227c3, #ff3939)"
-}
-
-export const latoTextStyle = {
-    fontFamily: "Lato, sans-serif",
-    textRendering: "optimizeLegibility !important",
-    WebkitFontSmoothing: "antialiased !important"
-}

@@ -2,8 +2,13 @@ import React from 'react'
 
 const LandingPage = () => {
     return (
-        <div>
-            
+        <div className={classes.landingPage}>
+            <LandingNavBar 
+                {...props}
+            />
+            <main className="main">
+                <Hero />
+            </main>
         </div>
     )
 }

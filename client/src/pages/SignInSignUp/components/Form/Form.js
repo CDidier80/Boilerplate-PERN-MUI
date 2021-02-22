@@ -1,17 +1,13 @@
-import { latoTextStyle } from "../../../../modules/themeAndStyles"
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-import { makeStyles, withTheme} from '@material-ui/core/'
 import FormControl from "./components/FormControl"
-import { staticStyles } from "./styles/useStyles"
 import React, { useState, useEffect }from 'react'
 import LockedOut from './components/LockedOut'
+import { makeStyles} from '@material-ui/core/'
 import FormBody from "./components/FormBody"
 import Header from "./components/Header"
 
 
 const Form = (props) => {
-
-    const { fromApp, history } = props
 
     const [isSigningUp, toggleSigningUp] = useState(true)
 
@@ -38,19 +34,16 @@ const Form = (props) => {
             maxWidth: "410px",
             height: '70%',
             width: '50%',
-            ...latoTextStyle,
         },
         paperRoot: {
             maxHeight: medQuery("600px", null),
             borderRadius: "12px",
-            ...latoTextStyle,
         },
         textfield: {
             "& .MuiFilledInput-root": {
                 background: "rgb(black)"
             }
         },
-        ...staticStyles,
 
     })
 
@@ -76,4 +69,4 @@ const Form = (props) => {
     return  <FormBody {...propsFormBody} forSubmit={{...forSubmit}}/> 
 }
 
-export default withTheme(Form)
+export default Form
